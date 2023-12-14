@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Welcome!"
+date:   2023-12-14 15:30:51 -0500
+categories: ruby alex massaad
+---
+Here is the first post of my blog.
+
+Here is a quick code snippet to welcome you to my blog:
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Guest')
+#=> prints 'Hi, Guest' to STDOUT.
+{% endhighlight %}
+
+Thanks for reading!
