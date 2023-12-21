@@ -1,2 +1,2 @@
-Sitemap: https://www.victoriagarland.ca/sitemap.xml
+Sitemap: https://www.massaad.ca/sitemap.xml
 Disallow: /cdn-cgi/l/email-protection
