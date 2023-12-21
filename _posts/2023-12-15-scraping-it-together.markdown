@@ -4,7 +4,7 @@ title:  "Scraping Marketing Leads using Ruby and Selenium"
 date:   2023-12-14 17:30:51 -0500
 categories: ruby scraping selenium marketing
 ---
-Over my life I've started (and stopped!) dozens of small businesses and side hustles. Central to each business venture is finding marketing leads. In some cases this is simple. For example when I was a magician I would market locally in party supply stores and online. By forming a relationship with this business I was able to leave business cards to hopefully get phone calls for business, and to definitely date me today. But how about a local business that needs to actively reach out and market themselves online? There are some very clever things we can do.
+Over my life I've started (and stopped!) dozens of small businesses and side hustles. Central to each business venture is finding marketing leads. In some cases this is simple. For example when I was a [magician](https://alexthegreat.ca/) I would market locally in party supply stores and online. By forming a relationship with this business I was able to leave business cards, and this would do two things. First I would hopefully get phone calls for magic shows and second to date me today. But how would I do this for a local business that needs to actively reach out and market themselves online? There are some very clever things we can do.
 
 In this case my approach is to find clients from local business directories. In my area there are several public listings for local businesses, but manually capturing this data would be exhausting. I'm a software creator, can I not create something to help with this problem? Yes.
 
@@ -14,7 +14,7 @@ I'm going to teach how I was able to capture it all automatically using Ruby in 
 
 ### 49 Pages!? That's a bit too overwhelming to manually process.
 
-This is where Ruby comes to the rescue!
+There are 49 pages of businesses which would take ages to manually capture. This is where Ruby comes to the rescue!
 
 Specifically I chose Selenium Webdriver wrapped in a Ruby script that I wrote in the root directory of a new Rails project.
 
@@ -22,17 +22,17 @@ Specifically I chose Selenium Webdriver wrapped in a Ruby script that I wrote in
 
 Sometimes the tool choice can impact the final result as much or even more than the actual effort and design, so why did I decide on these tools? Here is my reasoning:
 
-1. Simplicity: Ruby is easy to read and this means its easier to write good code. Good code is easy change and this may need changing a year or two down the road (in case I want to update my data). I feel this will be very easy to adjust as the HTML changes.
+1. Simplicity: Ruby is easy to read and this means its easier to write good code. Good code is easy to change and realistically this code may need changing a year or two down the road (in case I want to update my data). I feel this will be very easy to adjust as the HTML changes and to adapt it to other business directories.
 
-1. Speed of Setup: All the gems are included by default in a new Rails 7 project. This makes it an absolute breeze to start development on my new project/experiment/great idea. As with any creative endeavour we are constantly battling [resistance](https://en.wikipedia.org/wiki/Resistance_(creativity)) which means getting started efficiently may mean the difference between this getting completed or not. All we have to do is: `rails new contact_builder`. I don't need any rails features, but it makes the getting started process very easy. I know that I can always cut the ruby code out and create a new Gemfile once the whole thing works.
+1. Speed of Setup: All the gems we need are included by default in a new Rails 7 project. This makes it an absolute breeze to start development on my new project/experiment/great idea. As with any creative endeavour we are constantly battling [resistance](https://en.wikipedia.org/wiki/Resistance_(creativity)) which means getting started efficiently may mean the difference between this getting completed or not. All we have to do is type: `rails new contact_builder`. I don't need any rails features, but it makes the getting started process very easy. I know that I can always cut the ruby code out and create a new Gemfile once the whole thing works but I like the overkill for now.
 
-1. Familiarity: I spent a decade at Shopify using Ruby to build things over the internet. Shopify is a [pretty large Ruby shop](https://github.com/Shopify?q=&type=all&language=ruby&sort=) and has showered me with an immense amount of information about this language. Go with what you know, in this case it will make me faster at coding this up.
+1. Familiarity: I spent a decade at Shopify using Ruby to build things over the internet. Shopify is a [pretty large Ruby shop](https://github.com/Shopify?q=&type=all&language=ruby&sort=) and has showered me with an immense amount of information about this language. They say "go with what you know" and in this case it will make me faster at coding this up.
 
-1. Visual feedback: Using Selenium allows me to visually inspect what the browser is doing at each phase of the script. Rather than focussing exclusively on console logs I can augment this with the actual webpage I'm trying to scrape. Its much easier to reason about where in the script is when you can see the page open in Chrome.
+1. Visual feedback: Using Selenium allows me to visually inspect what the browser is doing at each phase of the script. Rather than focussing exclusively on console logs I can augment this with the actual webpage I'm trying to scrape. Its much easier to reason about where in the script is when you can see the page open in Chrome. It also will indicate to me very clearly if we get blacklisted or the server starts timing out.
 
 ## Hands to Keyboard
 
-Where to begin? Thankfully when running a Selenium Webdriver script it will open a browser window so if you're attentive you will see a hint of what it is doing before the script auto-exits. The first thing I add is the main page, some boilerplate to require and grab a Selenium WebDriver instance and a sleep after navigating to the main page.
+Where to begin? Thankfully when running a Selenium Webdriver script it will open a browser window so if you're attentive you will see a hint of what it is doing before the script auto-exits. The first thing I added was the main page, some boilerplate to require and grab a Selenium WebDriver instance and a sleep after navigating to the main page.
 
 ```ruby
 require 'selenium-webdriver'
@@ -58,13 +58,19 @@ Start simple. So many things might go wrong that I try to make sure each step wo
 
 ## Divide and Conquer
 
-When coaching and mentoring I try to encourage a smaller, incremental approach where it makes sense. In this case I mean: rather than grabbing all my business info I will first generate a CSV with each detail page URL.
+When coaching and mentoring I try to encourage a smaller, incremental approach where it makes sense. Break more complex concepts into more basic elements the way first-principles thinking does and it will be much easier to reason about the parts.
+
+> (P.S. You can book me for coaching at [igotanoffer.com](https://igotanoffer.com/en/coach/alexander) )
+
+
+In this case I mean: rather than grabbing all my business info I will first generate a CSV with each detail page URL.
+
 
 Here is what that would look like:
 
 ![](/assets/img/divide_responsabilties.png)
 
-We have a directory index with a link to the next page, and links to details about each business. Rather than traverse each child now (especially while perfecting the script, and encountering failure) wouldn't it be better to split this into two steps? This is the approach I took.
+We have a directory index with a link to the next page and links to details about each business. Rather than traverse each child now (especially while perfecting the script, and encountering failure) wouldn't it be better to split this into two steps? This is the approach I took.
 
 
 ```ruby
@@ -143,7 +149,7 @@ I'm happy smashing all social media links into one field. I can always process t
 
 As a starting point I open the CSV from the previous step (after making a copy locally) and iterate through each page, choosing to skip to the next record if the completed column is set to `true`. The next part is a lot more complicated to explain - thankfully we split this up from the earlier part!
 
-The details of the business directory each have a div which looks like this, in particular the business details are in an unnamed span following a named span for eg `<span id="Address">Address</span>` which is perfect for selecting with Selenium but terrible for capturing the data form the next element, or is it?
+The details of the business directory each have a div which looks like the snippet below, in particular the business details are in an unnamed span following a named span for eg `<span id="Address">Address</span>` which is perfect for selecting with Selenium but terrible for capturing the data form the next element, or is it?
 
 ### HTML in question, notice how the address, phone etc are in unnamed divs. Darn!
 
@@ -313,4 +319,4 @@ scrape_pages
 scrape_details
 ```
 
-And there we go! An hour later I had a CSV with as many business details for local businesses as I could find. 
+And there we go! At the end we can just run both methods (or one at a time) and generate the list of pages, and then grab all the details. A couple hours later I had a CSV with as many business details for local businesses as I could find. 
