@@ -21,17 +21,18 @@
 title: Alex Massaad | Blog of various wonders
 email: alexander@alexthegreat.ca
 description: >- # this means to ignore newlines until "baseurl:"
-  The personal blog of Alexander Massaad. I write about various topics that 
-  interest me, including programming, technology, and philosophy.
+  The blog of Alexander Massaad. I write about various topics including ruby code, software/hardware hacks, 
+  side projects, and whatever else I find interesting.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://massaad.ca" # the base hostname & protocol for your site, e.g. http://example.com
-
+url: "https://www.massaad.ca" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: plainwhite
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+show_excerpts: true
 
 plainwhite:
   name: Alex Massaad
@@ -46,7 +47,6 @@ plainwhite:
   # disqus_shortname: alexthegreat
   analytics_id: "G-Z6M25BDZFK"
   sitemap: true
-  show_excerpts: true
   navigation:
     - title: Blog
       url: /

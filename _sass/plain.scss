@@ -74,6 +74,35 @@ main {
     border: 7px solid rgba(51, 49, 54, 0.1);
     border-radius: 50%!important;
   }
+
+  .feed-subscribe {
+    display: flex;
+    justify-content: center;
+  }
+
+  .plain-button {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px 20px 11px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 200ms,background 200ms;
+    background: transparent;
+    color: #000000;
+    box-shadow: 0 0 0 3px #000000 inset;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    :hover{
+        transform: translateY(-2px);
+    }
+  }
+
   .content {
     @media screen and (min-width: $mobileW + 1) {
       max-width: calc(100% - #{$leftWidth});
@@ -255,6 +284,7 @@ main {
   line-height: 1.9em;
   p {
     margin-top: 10px;
+    margin-bottom: 30px;
   }
   a {
     color: $linkColor;

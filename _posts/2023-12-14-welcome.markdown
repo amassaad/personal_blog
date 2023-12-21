@@ -4,7 +4,7 @@ title:  "Welcome!"
 date:   2023-12-14 15:30:51 -0500
 categories: ruby alex massaad
 ---
-Here is the first post of my blog.
+Here is the first post of my blog. Over the years I've had various blogs on various platforms, mainly to promote my businesses. The latest was my [record label](https://atam.ca/blogs/atam-productions) homepage (last updated in 2017), and before that I was promoting my [magician business](https://www.alexthegreat.ca/blogs/ottawa-magic-news) (last updated in 2015) so this will be my first writings in a long time!
 
 Here is a quick code snippet to welcome you to my blog:
 {% highlight ruby %}
