@@ -1,0 +1,2 @@
+Sitemap: https://www.victoriagarland.ca/sitemap.xml
+Disallow: /cdn-cgi/l/email-protection
