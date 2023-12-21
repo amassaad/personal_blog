@@ -45,13 +45,14 @@ layout: default
         <div class="post">
           {%- if site.show_excerpts -%}
             {{ post.excerpt }}
+            <button class="plain-button">
+              <a class="post-link" href="{{ post.url | relative_url }}">Read more!</a>
+            </button>
           {%- endif -%}
         </div>
       </li>
     {%- endfor -%}
   </ul>
 
-  <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
-		<use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-	</svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p> -->
+  <p class="feed-subscribe"><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p>
 {%- endif -%}

@@ -76,7 +76,6 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.3.2)
   jekyll-feed (~> 0.12)
-  jekyll-seo-tag
   jekyll-sitemap
   plainwhite
   tzinfo (>= 1, < 3)
