@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/amassaad/jekyll-seo-tag.git
+  revision: a6e9330112d1d622e0b11277df9e0257a3dea43c
+  specs:
+    jekyll-seo-tag (2.8.0)
+      jekyll (>= 3.8, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,10 +42,6 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
-    jekyll-seo-tag (2.8.0)
-      jekyll (>= 3.8, < 5.0)
-    jekyll-sitemap (1.4.0)
-      jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.4.0)
@@ -76,8 +79,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.3.2)
   jekyll-feed (~> 0.12)
-  jekyll-seo-tag
-  jekyll-sitemap
+  jekyll-seo-tag!
   plainwhite
   tzinfo (>= 1, < 3)
   tzinfo-data

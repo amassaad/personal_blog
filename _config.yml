@@ -31,7 +31,6 @@ url: "https://massaad.ca" # the base hostname & protocol for your site, e.g. htt
 theme: plainwhite
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
 
 plainwhite:
