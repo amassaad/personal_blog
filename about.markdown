@@ -11,3 +11,10 @@ I specialize in Ruby, Rails, Python, and Go, providing me with a robust foundati
 Here is a gif from the last hour at my home:
 
 ![](https://massaad-homebot.s3.us-east-2.amazonaws.com/timelapse/data/_videos/last-hour.gif)
+
+And here is the video
+<video width="640" height="480" autoplay loop  muted>
+
+  <source src="https://massaad-homebot.s3.us-east-2.amazonaws.com/timelapse/data/_videos/last-hour.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
