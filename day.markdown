@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Daily Fergus Timelapse
+permalink: /day/
 ---
 
 And here is the video of the last day at my home in Fergus Ontario Canada.
