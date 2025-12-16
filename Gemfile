@@ -8,8 +8,12 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-ruby  "3.2.2"
+ruby  "3.4.7"
 gem "jekyll", "~> 4.3.3"
+# Required for Ruby 3.4+ (removed from stdlib)
+gem "csv"
+gem "base64"
+gem "bigdecimal"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.5"
 gem "plainwhite"
