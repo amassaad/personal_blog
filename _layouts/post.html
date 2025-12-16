@@ -2,12 +2,15 @@
 layout: default
 ---
 {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
+{%- assign words = content | number_of_words -%}
+{%- assign reading_time = words | divided_by: 200 | plus: 1 -%}
 <div class="post-container">
   <a class="post-link" href="{{ page.url | relative_url | replace:'.html','' }}">
     <h2 class="post-title">{{ page.title | escape }}</h2>
   </a>
   <div class="post-meta">
     <div class="post-date"><i class="icon-calendar"></i>{{ page.date | date: date_format }}</div>
+    <span class="reading-time">{{ reading_time }} min read</span>
     {%- if page.categories.size > 0 -%}
     <ul class="post-categories">
       {%- for tag in page.categories -%}
@@ -19,6 +22,20 @@ layout: default
   <div class="post">
     {{ content }}
   </div>
+  
+  <!-- Fun footer for posts -->
+  <div class="post-footer">
+    <div class="post-footer-thanks">
+      <span class="emoji">🎉</span>
+      <span>Thanks for reading! You made it through {{ words }} words.</span>
+    </div>
+    <div class="post-footer-share">
+      <span>Share this adventure:</span>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener" class="share-link twitter">𝕏</a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}&title={{ page.title | url_encode }}" target="_blank" rel="noopener" class="share-link linkedin">in</a>
+    </div>
+  </div>
+  
   {%- if site.plainwhite.disqus_shortname -%}
   <div id="disqus_thread" style="margin-top:25px"></div>
   <script>
