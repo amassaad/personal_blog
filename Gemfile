@@ -8,7 +8,7 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-ruby  "3.4.7"
+ruby  "3.4.4"
 gem "jekyll", "~> 4.3.3"
 # Required for Ruby 3.4+ (removed from stdlib)
 gem "csv"
