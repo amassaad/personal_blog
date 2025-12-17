@@ -15,7 +15,7 @@ $bgSecondary: #f1f5f9;
 $bgCard: #ffffff;
 $borderColor: #e2e8f0;
 $gradientPrimary: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-$gradientSubtle: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+$gradientSubtle: #f8fafc;
 $shadowSoft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 $shadowMedium: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
 $shadowLarge: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
@@ -48,19 +48,6 @@ body {
   color: $textPrimary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  // Subtle animated background gradient
-  &::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 400px;
-    background: linear-gradient(180deg, rgba(99, 102, 241, 0.03) 0%, transparent 100%);
-    pointer-events: none;
-    z-index: -1;
-  }
 }
 
 img,
