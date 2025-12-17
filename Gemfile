@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 ruby  "3.4.4"
-gem "jekyll", "~> 4.3.3"
+gem "jekyll", "~> 4.4.1"
 # Required for Ruby 3.4+ (removed from stdlib)
 gem "csv"
 gem "base64"
