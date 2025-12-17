@@ -7,7 +7,7 @@ categories: customer-support zendesk
 
 They say irony is dead, but I'm pretty sure it's just stuck in a ticket queue somewhere at Zendesk.
 
-Recently, I decided to do some digital spring cleaning. I  have had less time for side-projects in my current timeline. One rough edge I noticed was an old Zendesk developer account: a relic from a long-forgotten failed app that I didn't need anymore. I only noticed it was still active because, ironically, it started spamming me with a ridiculous amount of emails.
+Recently, I decided to do some digital spring cleaning. I've had less time for side-projects lately, and you know the old saying: the nail that sticks out gets hammered down. For me, that nail was an old Zendesk developer account, a relic from a long-forgotten failed app that I didn't need anymore. I only noticed it was still active because, ironically, it started spamming me with a ridiculous amount of emails.
 
 "No problem," I thought. "Zendesk is *the* industry leader in customer support software. Surely, using Zendesk to get support from Zendesk to cancel Zendesk will be a seamless experience." I thought.
 
