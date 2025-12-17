@@ -65,7 +65,7 @@ On December 4th, I nudged them. The ticket looked like it was auto-closing due t
 
 This is where it got truly Kafkaesque.
 
-Rachel from the "Renewals team" finally responded. After being in an email thread associated with my account for five days, a thread where I'm logged in, where my email is visible, where the entire context is about canceling *my* account—she asked:
+Rachel from the "Renewals team" finally responded. After being in an email thread associated with my account for five days, a thread where I'm logged in, where my email is visible, where the entire context is about canceling *my* account, she asked:
 
 "Could you kindly confirm the subdomain you are requesting to cancel?"
 
