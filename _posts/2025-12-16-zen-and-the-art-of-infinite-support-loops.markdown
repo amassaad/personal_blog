@@ -57,7 +57,7 @@ Four days passed. Silence.
 
 On December 4th, I nudged them. The ticket looked like it was auto-closing due to inactivity. *I* was inactive? I literally replied "Hi there, I'm looking to cancel" to make sure there was no ambiguity.
 
-*Sidenote: I want to be clear—I'm not dunking on individual support agents here. My first role at Shopify back in February 2013 was as a support agent. I've answered the angry phone calls, the frustrated emails, the impatient chats. I commiserate. I've made my share of mistakes under time pressure: like the time I addressed a miffed "Carla" as "Carlos." I get it. What I'm critiquing is the system, not the people trapped inside it.*
+*Sidenote: I want to be clear: I'm not dunking on individual support agents here. My first role at Shopify back in February 2013 was as a support agent. I've answered the angry phone calls, the frustrated emails, the impatient chats. I commiserate. I've made my share of mistakes under time pressure: like the time I addressed a miffed "Carla" as "Carlos." I get it. What I'm critiquing is the system, not the people trapped inside it.*
 
 ---
 
